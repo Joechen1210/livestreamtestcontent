@@ -52,7 +52,7 @@
     vjs.play();
   };
   document.getElementById('get').onclick = function(){
-    alert( vjs.seekable().start(0) + '\n' + vjs.seekable().end(0) + '\n' + vjs.duration() );
+    alert( vjs.buffered().start(0) + '\n' + vjs.buffered().end(0) + '\n' + vjs.duration() );
   };
 </script>
 </body></html>
