@@ -52,7 +52,8 @@
     vjs.play();
   };
   document.getElementById('get').onclick = function(){
-    alert( vjs.buffered().start(0) + '\n' + vjs.buffered().end(0) + '\n' + vjs.duration() );
+    alert( 'seekable_start: ' + vjs.buffered().start(0) + '\nseekable_end:' + vjs.buffered().end(0) + '\nduration:' + vjs.duration() );
+    alert( 'buffered_start: ' + vjs.buffered().start(0) + '\nbuffered_end: ' + vjs.buffered().end(0));
   };
 </script>
 </body></html>
