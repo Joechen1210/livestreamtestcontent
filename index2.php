@@ -29,7 +29,8 @@
 <div id="dfp"></div>
 
 <button id="play">play</button>
-<button id="get">get</button>
+<button id="seekable">seekable</button>
+<button id="buffered">buffered</button>
 
 <div id="T5xPlayerBlock">
 
@@ -51,9 +52,11 @@
   document.getElementById('play').onclick = function(){
     vjs.play();
   };
-  document.getElementById('get').onclick = function(){
-    //alert( 'seekable_start: ' + vjs.buffered().start(0) + '\nseekable_end:' + vjs.buffered().end(0) + '\nduration:' + vjs.duration() );
-    alert( 'buffered_start: ' + vjs.buffered().start(0) + '\nbuffered_end: ' + vjs.buffered().end(0));
+    document.getElementById('seekable').onclick = function(){
+    alert( 'seekable_start: ' + vjs.buffered().start(0) + '\nseekable_end:' + vjs.buffered().end(0) + '\nduration:' + vjs.duration() );
+  };
+  document.getElementById('buffered').onclick = function(){
+    alert( 'buffered_start: ' + vjs.buffered().start(0) + '\nbuffered_end: ' + vjs.buffered().end(0)+ '\nduration:' + vjs.duration());
   };
 </script>
 </body></html>
